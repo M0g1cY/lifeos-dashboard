@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人生操作系统 - Life OS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 星空背景层 -->
+  <div class="stars-background"></div>
+
+  <!-- 顶部导航栏 -->
+  <header class="top-bar glass-card">
+    <div class="top-bar-left">
+      <button class="icon-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="top-bar-right">
+      <button class="icon-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </button>
+      <button class="icon-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+      </button>
+      <button class="icon-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+      </button>
+      <div class="user-info">
+        <span class="greeting">船长你好</span>
+        <div class="avatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主容器：三栏布局 -->
+  <div class="container">
+
+    <!-- ========== 左侧栏（25%） ========== -->
+    <aside class="sidebar-left">
+
+      <!-- 1. 航行状态卡片 -->
+      <div class="glass-card sailing-status">
+        <h3 class="card-title">航行状态</h3>
+
+        <!-- 圆形进度环 -->
+        <div class="progress-ring-container">
+          <svg class="progress-ring" width="180" height="180">
+            <circle class="progress-ring-bg" cx="90" cy="90" r="75"></circle>
+            <circle class="progress-ring-fill" cx="90" cy="90" r="75"></circle>
+          </svg>
+          <div class="progress-center">
+            <span class="progress-value">76%</span>
+            <span class="progress-label">人生进度</span>
+          </div>
+        </div>
+
+        <!-- 三个子指标 -->
+        <div class="sub-metrics">
+          <div class="metric-item">
+            <span class="metric-label">已航行</span>
+            <span class="metric-value">28 年</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-label">预计寿命</span>
+            <span class="metric-value">80 年</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-label">剩余航程</span>
+            <span class="metric-value">52 年</span>
+          </div>
+        </div>
+
+        <p class="status-message">优秀，继续前行！</p>
+      </div>
+
+      <!-- 2. 核心导航 -->
+      <nav class="glass-card core-navigation">
+        <h3 class="card-title">核心导航</h3>
+        <ul class="nav-list">
+          <li class="nav-item active">
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+            <span class="nav-label">人生愿景</span>
+            <svg class="nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </li>
+          <li class="nav-item">
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+            <span class="nav-label">目标管理</span>
+            <svg class="nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </li>
+          <li class="nav-item">
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            <span class="nav-label">习惯系统</span>
+            <svg class="nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </li>
+          <li class="nav-item">
+            <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            <span class="nav-label">成长记录</span>
+            <svg class="nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 3. 工具箱 -->
+      <div class="glass-card toolbox">
+        <h3 class="card-title">工具箱</h3>
+        <div class="tool-grid">
+          <button class="tool-btn">
+            <svg class="tool-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span class="tool-label">时间管理</span>
+          </button>
+          <button class="tool-btn">
+            <svg class="tool-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="tool-label">情绪管理</span>
+          </button>
+          <button class="tool-btn">
+            <svg class="tool-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            <span class="tool-label">知识库</span>
+          </button>
+          <button class="tool-btn">
+            <svg class="tool-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            <span class="tool-label">健康管理</span>
+          </button>
+          <button class="tool-btn">
+            <svg class="tool-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+            <span class="tool-label">财务管理</span>
+          </button>
+          <button class="tool-btn">
+            <svg class="tool-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="1"></circle>
+              <circle cx="19" cy="12" r="1"></circle>
+              <circle cx="5" cy="12" r="1"></circle>
+            </svg>
+            <span class="tool-label">更多工具</span>
+          </button>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ========== 中央区域（50%） ========== -->
+    <main class="main-content">
+
+      <!-- 航海主文案 - 独立展示，不需要卡片包裹 -->
+      <div class="hero-quote">
+        <p>"不必追赶所有的浪潮，你只需成为自己的舵手。"</p>
+      </div>
+
+    </main>
+
+    <!-- ========== 右侧栏（25%） ========== -->
+    <aside class="sidebar-right">
+
+      <!-- 1. 今日航行任务清单 -->
+      <div class="glass-card today-tasks">
+        <h3 class="card-title">今日航行</h3>
+        <ul class="task-list">
+          <li class="task-item">
+            <input type="checkbox" id="task1" class="task-checkbox">
+            <label for="task1" class="task-label">完成工作汇报文档</label>
+          </li>
+          <li class="task-item completed">
+            <input type="checkbox" id="task2" class="task-checkbox" checked>
+            <label for="task2" class="task-label">阅读《人生算法》第2章</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="task3" class="task-checkbox">
+            <label for="task3" class="task-label">健身房训练30分钟</label>
+          </li>
+          <li class="task-item">
+            <input type="checkbox" id="task4" class="task-checkbox">
+            <label for="task4" class="task-label">给父母打电话</label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 2. 人生北极星 -->
+      <div class="glass-card north-star">
+        <h3 class="card-title">人生北极星</h3>
+        <div class="north-star-content">
+          <svg class="north-star-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <p class="value-statement">成为有影响力的创造者</p>
+          <ul class="principles">
+            <li>保持好奇心，持续学习</li>
+            <li>追求卓越，注重细节</li>
+            <li>真诚待人，建立信任</li>
+            <li>长期主义，延迟满足</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3. 航行里程碑 -->
+      <div class="glass-card milestones">
+        <h3 class="card-title">航行里程碑</h3>
+        <ul class="milestone-list">
+          <li class="milestone-item">
+            <div class="milestone-dot"></div>
+            <span class="milestone-text">完成项目交付</span>
+          </li>
+          <li class="milestone-item">
+            <div class="milestone-dot"></div>
+            <span class="milestone-text">获得专业认证</span>
+          </li>
+          <li class="milestone-item completed">
+            <div class="milestone-dot"></div>
+            <span class="milestone-text">完成一次旅行</span>
+          </li>
+          <li class="milestone-item">
+            <div class="milestone-dot"></div>
+            <span class="milestone-text">建立新习惯</span>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+
+    <!-- 六大人生维度 - 页面下方 -->
+    <div class="dimensions-section">
+      <div class="glass-card dimension-card">
+        <svg class="dimension-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+        </svg>
+        <h4>存在意义</h4>
+        <p>探索生命的意义与价值</p>
+        <div class="progress-bar"><div class="progress" style="width: 68%"></div></div>
+      </div>
+
+      <div class="glass-card dimension-card">
+        <svg class="dimension-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+        </svg>
+        <h4>能力成长</h4>
+        <p>持续学习与精进</p>
+        <div class="progress-bar"><div class="progress" style="width: 72%"></div></div>
+      </div>
+
+      <div class="glass-card dimension-card">
+        <svg class="dimension-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="1" x2="12" y2="23"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        <h4>财富安全</h4>
+        <p>经济独立与财务自由</p>
+        <div class="progress-bar"><div class="progress" style="width: 65%"></div></div>
+      </div>
+
+      <div class="glass-card dimension-card">
+        <svg class="dimension-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <h4>探索世界</h4>
+        <p>体验不同的文化与风景</p>
+        <div class="progress-bar"><div class="progress" style="width: 58%"></div></div>
+      </div>
+
+      <div class="glass-card dimension-card">
+        <svg class="dimension-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <h4>关系连接</h4>
+        <p>建立深度的人际关系</p>
+        <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+      </div>
+
+      <div class="glass-card dimension-card">
+        <svg class="dimension-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <h4>身心状态</h4>
+        <p>保持健康的身心平衡</p>
+        <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+      </div>
+    </div>
+
+    <!-- 航行数据统计栏 - 最底部 -->
+    <div class="stats-bar glass-card">
+      <div class="stat-item">
+        <svg class="stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span class="stat-value">10,227</span>
+        <span class="stat-label">航行天数</span>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span class="stat-value">36</span>
+        <span class="stat-label">探索地点</span>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+        </svg>
+        <span class="stat-value">128</span>
+        <span class="stat-label">克服风浪</span>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+        </svg>
+        <span class="stat-value">56</span>
+        <span class="stat-label">帮助他人</span>
+      </div>
+      <div class="stat-item">
+        <svg class="stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <span class="stat-value">晴朗</span>
+        <span class="stat-label">今日天气</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
